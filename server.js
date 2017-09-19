@@ -10,6 +10,7 @@
 
 // Dependencies
 var express = require("express");
+var port = process.env.PORT || 3000;
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
@@ -198,7 +199,8 @@ app.post("/articles/:id", function(req, res) {
 });
 
 
+
 // Listen on port 3000
-app.listen(3000, function() {
+app.listen(port, function() {
   console.log("App running on port 3000!");
 });
